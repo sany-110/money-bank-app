@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Money Bank Challenge 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <h1>💰 Money Bank</h1>
+    <p class="goal">Goal: ৳150,000</p>
+
+    <div class="summary">
+        <div>
+            <span>Saved</span>
+            <strong>৳<span id="saved">0</span></strong>
+        </div>
+        <div>
+            <span>Remaining</span>
+            <strong>৳<span id="remaining">150000</span></strong>
+        </div>
+    </div>
+
+    <div class="month-select">
+        <label>📅 Month</label>
+        <select id="monthSelect"></select>
+    </div>
+
+    <div id="monthSummary" class="month-summary"></div>
+
+    <h3>📊 Monthly Challenge</h3>
+    <div id="challengeGrid" class="grid"></div>
+
+    <h3>💵 Deposit Money</h3>
+    <div class="buttons">
+        <button onclick="deposit(100)">৳100</button>
+        <button onclick="deposit(200)">৳200</button>
+        <button onclick="deposit(500)">৳500</button>
+        <button onclick="deposit(1000)">৳1000</button>
+    </div>
+
+    <button class="undo" onclick="undoLast()">↩️ Undo Last</button>
+    <button class="toggle" onclick="toggleHistory()">📜 Toggle History</button>
+
+    <div id="historyBox" class="history hidden">
+        <ul id="history"></ul>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
