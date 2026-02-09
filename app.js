@@ -140,4 +140,7 @@ function save() {
 // Init
 monthSelect.value = MONTHS[new Date().getMonth()];
 render();
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
 
