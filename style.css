@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.app {
+    max-width: 420px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+h1 {
+    text-align: center;
+}
+
+.goal {
+    text-align: center;
+    color: #555;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.summary div {
+    text-align: center;
+}
+
+.month-select {
+    margin-bottom: 10px;
+}
+
+.month-summary {
+    background: #f6f6f6;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.cell {
+    padding: 10px;
+    border-radius: 8px;
+    background: #eee;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.15s ease;
+}
+
+/* Progressive colors for checked boxes */
+.cell.done.p1 { background: #f8cdd1; }   /* 0–25% */
+.cell.done.p2 { background: #ffe0b2; }   /* 26–50% */
+.cell.done.p3 { background: #cce5ff; }   /* 51–75% */
+.cell.done.p4 { background: #c8e6c9; }   /* 76–100% */
+
+.cell.done {
+    transform: scale(1.03);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #ff7675;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.undo {
+    margin-top: 10px;
+    background: #d63031;
+}
+
+.toggle {
+    margin-top: 10px;
+    background: #6c5ce7;
+}
+
+.history {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+li {
+    background: #f1f1f1;
+    margin-bottom: 5px;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 13px;
+}
